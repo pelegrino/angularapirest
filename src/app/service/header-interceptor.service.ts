@@ -32,10 +32,9 @@ export class HeaderInterceptorService implements HttpInterceptor {
     provide: HTTP_INTERCEPTORS,
     useClass: HeaderInterceptorService,
     multi: true,
-
   },
-],
-})
+  ],
+})  
 
 export class HttpInterceptorModule {
   
