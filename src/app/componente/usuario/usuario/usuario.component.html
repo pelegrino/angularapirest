@@ -6,10 +6,10 @@
     </thead>
 
     <tbody>
-        <tr *ngFor="let student of students | async" >
-            <td>{{ student.id }}</td>
-            <td>{{ student.nome }}</td>
-            <td>{{ student.cpf }}</td>
+        <tr *ngFor="let student of students">
+            <td>{{student.id}}</td>
+            <td>{{student.nome}}</td>
+            <td>{{student.cpf}}</td>
 
         </tr>
     </tbody>

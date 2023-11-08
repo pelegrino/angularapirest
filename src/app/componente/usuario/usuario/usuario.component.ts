@@ -10,7 +10,7 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 })
 export class UsuarioComponent implements OnInit {
 
-  students!: Observable<User[]>;
+  students: User[] = [];
 
   constructor(private usuarioService: UsuarioService) {
     
