@@ -20,7 +20,15 @@ export class UsuarioComponent implements OnInit {
     this.usuarioService.getStudentsList().subscribe(data => {
       this.students = data;
     });
+  }
 
+  deleteUsuario(id: Number) {
+    this.usuarioService.deletarUsuario(id).subscribe(data => {
+      console.log("Retorno do método delete: " + data);
+      this.usuarioService.getStudentsList().subscribe(data => {
+        this.students = data;
+      });
+    });
   }
 
 }

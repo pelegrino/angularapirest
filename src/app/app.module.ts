@@ -16,7 +16,7 @@ export const appRouters: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: '', component: LoginComponent},
-  {path: 'usuarioList', component: UsuarioComponent}
+  {path: 'userList', component: UsuarioComponent}
 ];
 
 export const routes: ModuleWithProviders<any> = RouterModule.forRoot(appRouters);
