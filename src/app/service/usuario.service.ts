@@ -18,4 +18,8 @@ export class UsuarioService {
     return this.http.delete(AppConstants.baseUrl + id, {responseType: 'text'});
   }
 
+  consultarUser(nome: String): Observable<any> {
+    return this.http.get(AppConstants.baseUrl + "usuarioPorNome/" + nome);
+  }
+
 }

@@ -11,6 +11,7 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 export class UsuarioComponent implements OnInit {
 
   students: User[] = [];
+  nome: String = "";
 
   constructor(private usuarioService: UsuarioService) {
     
@@ -28,6 +29,12 @@ export class UsuarioComponent implements OnInit {
       this.usuarioService.getStudentsList().subscribe(data => {
         this.students = data;
       });
+    });
+  }
+
+  consultarUser() {
+    this.usuarioService.consultarUser(this.nome).subscribe(data => {
+      this.students = data;
     });
   }
 
