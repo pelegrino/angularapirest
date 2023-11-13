@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { User } from 'src/app/model/user';
+import { UsuarioService } from 'src/app/service/usuario.service';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +10,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UsuarioAddComponent {
 
-  constructor (private routeActive: ActivatedRoute) {}
+  usuario = new User();
+
+  constructor (private routeActive: ActivatedRoute, private userService: UsuarioService) {}
 
   ngOnInit() {
     let id = this.routeActive.snapshot.paramMap.get('id');
 
-    if (id !== null) {
-      console.log("Valores sendo editado: " + id);
+    if (id != null) {
+      this.userService.getStudent(id).subscribe(data => {
+        this.usuario = data;
+      });
     }
 }
 }
