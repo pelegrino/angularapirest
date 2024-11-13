@@ -13139,7 +13139,7 @@
     }
   },
   "dependencies": {
-    "@angular-devkit/build-angular": "^16.2.9",
+    "@angular-devkit/build-angular": "^16.2.16",
     "@angular/core": "^16.2.12",
     "@angular/forms": "^16.2.12",
     "@angular/platform-browser": "^16.2.12",
